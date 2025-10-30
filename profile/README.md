@@ -1,181 +1,97 @@
-# 🚀 CodingAsOne • Node.js Boilerplate
+<!-- Banner -->
+<p align="center">
+  <img src="https://github.com/CodingAsOne/.github/assets/banner.png" alt="Banner CodingAsOne" width="100%" />
+</p>
 
-**Boilerplate oficial da organização [CodingAsOne](https://github.com/CodingAsOne)**  
-Base profissional para desenvolvimento de APIs e microsserviços em Node.js + TypeScript.
-
-> 🧱 Este repositório é o ponto de partida para todos os projetos da Codehouse **CodingAsOne**, garantindo padronização, escalabilidade e boas práticas de engenharia de software.
-
----
-
-## 🧭 Sobre a CodingAsOne
-
-A **CodingAsOne** é uma Codehouse que oferece soluções completas em desenvolvimento de software — da concepção à entrega.
-
-Nosso propósito é **unir pessoas, processos e tecnologia**, criando sistemas consistentes, escaláveis e fáceis de manter.
-
-> “Criamos código com propósito, como um só time.”
+<h1 align="center">👨‍💻 CodingAsOne</h1>
+<p align="center">
+  <strong>Construindo software de qualidade, juntos.</strong><br />
+  <em>Criamos soluções escaláveis com Node.js, TypeScript e práticas modernas de DevOps.</em>
+</p>
 
 ---
 
-## 🧩 Stack do Boilerplate
+### 💡 Sobre Nós
 
-| Área | Ferramenta | Descrição |
-|------|-------------|-----------|
-| 🧠 Linguagem | **TypeScript** | Base tipada para melhor manutenção |
-| ⚙️ Framework | **Express.js** | Estrutura leve e flexível para APIs |
-| 🗄️ ORM | **TypeORM** | Mapeamento de entidades e migrations |
-| 🔐 Auth | **JWT + dotenv** | Autenticação e variáveis de ambiente |
-| 📘 Docs | **Swagger** | Especificação de endpoints (`api-spec.yaml`) |
-| 🧪 Testes | **Jest** | Testes unitários e de integração |
-| 🧹 Lint | **ESLint + Prettier** | Padrões e formatação de código |
-| 🐳 Infra | **Docker + docker-compose** | Containerização e ambiente padronizado |
-| 🔄 CI/CD | **GitHub Actions** | Pipeline automatizada |
-| 🧠 Qualidade | **SonarQube (opcional)** | Métricas e análise estática |
-| 📈 Observabilidade | **New Relic (opcional)** | Monitoramento de performance |
+A **CodingAsOne** é uma *codehouse* especializada em desenvolvimento completo de software — do conceito à entrega.  
+Combinamos **pessoas, processos e tecnologia** para criar sistemas consistentes, escaláveis e de fácil manutenção.
+
+> “Codamos com propósito, como um só time.”
 
 ---
 
-## 🧱 Estrutura do Projeto
+### 🧠 Nossas Equipes
 
-```bash
-src/
- ├── config/          # Configurações de ambiente, banco, etc.
- ├── controllers/     # Camada de controle (rotas)
- ├── services/        # Regras de negócio
- ├── repositories/    # Acesso a dados
- ├── models/          # Entidades TypeORM
- ├── middlewares/     # Middlewares globais
- ├── routes/          # Rotas da aplicação
- ├── utils/           # Funções utilitárias
- ├── dependencies.ts  # Registro de dependências (typedi)
- └── app.ts           # Ponto de entrada da aplicação
-tests/
- ├── controllers/
- └── services/
-```
-⚙️ Scripts
-Comando	Descrição
-```bash
-npm run dev	Inicia o servidor com hot reload (ts-node-dev)
-npm run build	Compila o projeto para /build
-npm start	Executa o build em produção
-npm run test	Roda os testes com cobertura
-npm run lint	Verifica padrões de código
-npm run lint:fix	Corrige erros de lint automaticamente
-npm run migration	Executa migrations compiladas
-npm run migration:create	Cria nova migration
-npm run migration:revert	Reverte última migration
-```
-🔐 Variáveis de Ambiente (.env)
-```env
-PORT=3000
-JWT_SECRET=changeme_secret
+| Área | Descrição |
+|------|------------|
+| 🧑‍💻 **Desenvolvimento** | Especialistas em Node.js, TypeScript, React e microsserviços. |
+| 🧪 **Qualidade (QA)** | Testes automatizados, garantia de qualidade e validação de entregas. |
+| ☁️ **DevOps** | CI/CD, monitoramento e infraestrutura escalável na AWS. |
+| 🎨 **Design** | UX/UI, identidade visual e experiência do usuário. |
+| 📋 **Gestão de Projetos (PM)** | Alinhamento com o cliente, acompanhamento ágil e planejamento estratégico. |
 
-TYPEORM_CONNECTION=postgres
-TYPEORM_DATABASE=mydb
-TYPEORM_HOST=localhost
-TYPEORM_PORT=5432
-TYPEORM_USERNAME=user
-TYPEORM_PASSWORD=pass
-TYPEORM_SYNCHRONIZE=false
-TYPEORM_ENTITIES=build/src/models/*.js
-TYPEORM_MIGRATIONS=build/migrations/*.js
-TYPEORM_LOGGING=true
-
-NON_CORPORATE_EMAIL_CLIENTS="@gmail,@hotmail,@yahoo,@outlook,@uol"
-```
-## 🧠 Estrutura Organizacional • CodingAsOne
-A CodingAsOne é formada por times multifuncionais, que colaboram entre si para entregar soluções de ponta, de forma ágil e padronizada.
-
-🧑‍💻 Development Team
-Responsável pelo desenvolvimento técnico dos sistemas, APIs e integrações.
-
-| Cargo                   | Descrição                                                  |
-| ----------------------- | ---------------------------------------------------------- |
-| **Tech Lead**           | Define padrões técnicos e orienta o time                   |
-| **Backend Developer**   | Implementa lógica de negócio, integrações e banco de dados |
-| **Frontend Developer**  | Desenvolve interfaces e integra com APIs                   |
-| **Fullstack Developer** | Atua nas duas frentes, garantindo integração ponta a ponta |
-| **Mobile Developer**    | Responsável por apps híbridos ou nativos                   |
-| **DevOps Engineer**     | Cuida da automação, CI/CD e infraestrutura em nuvem        |
-
-
-🧩 QA & Quality Team
-Garante a qualidade e estabilidade das entregas através de testes e validações.
-
-| Cargo                   | Descrição                                       |
-| ----------------------- | ----------------------------------------------- |
-| **QA Lead**             | Planeja estratégias de testes e automação       |
-| **QA Analyst**          | Executa testes manuais e automatizados          |
-| **Automation Engineer** | Cria e mantém pipelines de testes automatizados |
-
-🧭 Product & UX Team
-Central de planejamento e experiência do usuário.
-
-| Cargo                | Descrição                                             |
-| -------------------- | ----------------------------------------------------- |
-| **Product Owner**    | Define prioridades e escopo de produto                |
-| **UX/UI Designer**   | Cria fluxos e interfaces centradas no usuário         |
-| **Business Analyst** | Traduz necessidades de negócio em requisitos técnicos |
-
-🧱 Support & Operations
-
-| Cargo                          | Descrição                                           |
-| ------------------------------ | --------------------------------------------------- |
-| **Scrum Master / Agile Coach** | Garante ritmo e boas práticas ágeis                 |
-| **Infra Engineer**             | Gerencia servidores, monitoramento e escalabilidade |
-| **Client Manager**             | Faz a ponte entre cliente e equipe técnica          |
-
-
-💼 Estrutura Interna da Organização no GitHub
-| Team         | Descrição                                 | Acesso           |
-| ------------ | ----------------------------------------- | ---------------- |
-| `Developers` | Desenvolvedores principais da organização | Push/PR          |
-| `QA`         | Analistas e testadores de qualidade       | PR e revisão     |
-| `DevOps`     | Automação, pipelines e Docker             | Deploy/CI        |
-| `Managers`   | Gerentes e Product Owners                 | Leitura total    |
-| `Clients`    | Acesso a projetos dedicados               | Leitura restrita |
-
-
-##### Cada time possui permissões específicas dentro da organização CodingAsOne, garantindo segurança e rastreabilidade em cada repositório.
 ---
-## 🌍 Uso do Template
-Vá até o repositório boilerplate-node
 
-Clique em "Use this template"
+### ⚙️ Stack Tecnológica
 
-Escolha o nome do novo repositório
+**Core**
+> ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+> ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+> ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 
-Ajuste o .env e rode:
+**APIs & Documentação**
+> ![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+> ![RESTful API](https://img.shields.io/badge/RESTful%20API-005571?logo=api&logoColor=white)
+> ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=black)
 
-```bash
-npm install
-npm run dev
-```
+**Infraestrutura & Testes**
+> ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+> ![AWS](https://img.shields.io/badge/AWS-FF9900?logo=amazonaws&logoColor=white)
+> ![Jest](https://img.shields.io/badge/Jest-C21325?logo=jest&logoColor=white)
+
 ---
-🧭 Próximos Passos
 
-👩‍💻 Para continuar sua jornada dentro do ecossistema CodingAsOne, siga para o repositório de tutoriais e guias internos.
+## 🚀 Metodologia de Trabalho
 
-📘 Acesse o repositório de tutoriais:
-👉 CodingAsOne / tutorials
+A **CodingAsOne** adota práticas ágeis para garantir entregas rápidas, transparentes e de alta qualidade.  
+Nos baseamos no **Scrum**, adaptando princípios do **Kanban** e **Lean Development** conforme o contexto do projeto.
 
-Lá você encontrará:
+| Papel / Função | Responsabilidade Principal |
+|----------------|-----------------------------|
+| **Scrum Master / Agile Coach** | Facilita o processo ágil e remove impedimentos. |
+| **Product Owner (PO)** | Define prioridades e representa a visão do cliente. |
+| **Time de Desenvolvimento** | Entrega valor de forma incremental e contínua. |
+| **Equipe de QA** | Garante a qualidade e automatiza testes em todas as etapas. |
+| **Engenheiro(a) DevOps** | Automatiza pipelines, integrações e entregas contínuas (CI/CD). |
 
-📦 Como configurar CI/CD no GitHub Actions
+🧩 **Práticas principais:**
+- Planejamento de sprints e refinamento de backlog  
+- Dailies curtas e objetivas  
+- Code reviews obrigatórios e pair programming  
+- Integração Contínua (**CI**) e Entrega Contínua (**CD**)  
+- Feedback constante e retrospectivas de melhoria contínua  
 
-🔄 Padrão de registro no dependencies.ts
+![Agile](https://img.shields.io/badge/Agile-Driven-blueviolet?logo=scrumalliance&logoColor=white)
+![Scrum](https://img.shields.io/badge/Scrum-Framework-ff69b4?logo=scrumalliance&logoColor=white)
+![Kanban](https://img.shields.io/badge/Kanban-Flow-009688?logo=trello&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI/CD-Automated-brightgreen?logo=githubactions&logoColor=white)
 
-🧪 Guia de testes unitários e mocks
+> 💬 “Metodologia não é burocracia — é cultura de entrega e aprendizado contínuo.”
 
-🧰 Padronização de commits e versionamento
-
-☁️ Deploy automatizado com AWS e Docker Compose
-
-💡 Dicas e boas práticas internas de desenvolvimento
 ---
-🧾 Licença
-> Licenciado sob a MIT License
-© 2025 — CodingAsOne
 
-✨ "We build. We learn. We grow. — CodingAsOne"
+### 📘 Tutoriais & Base de Conhecimento
+
+Acesse nosso repositório público com guias e tutoriais:  
+👉 [**CodingAsOne Tutorials**](https://github.com/CodingAsOne/tutorials)
+
+---
+
+### 🤝 Contato & Parcerias
+
+Quer colaborar ou contratar nossa equipe?  
+📩 **contact@codingasone.dev**
+
+---
+
+<p align="center">Feito com ❤️ pela equipe CodingAsOne</p>
