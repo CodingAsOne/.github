@@ -1,7 +1,7 @@
 <!-- Banner -->
-<p align="center">
-  <img src="https://github.com/CodingAsOne/.github/assets/banner.png" alt="Banner CodingAsOne" width="100%" />
-</p>
+<div align="center" style="max-height: 80px; overflow: hidden;">
+  <img src="../assets/banner.png" alt="Banner CodingAsOne" width="100%" />
+</div>
 
 <h1 align="center">👨‍💻 CodingAsOne</h1>
 <p align="center">
